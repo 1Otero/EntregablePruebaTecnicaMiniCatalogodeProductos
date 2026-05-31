@@ -1,0 +1,18 @@
+.example-card {
+  max-width: 330px;
+  box-sizing: border-box;
+  overflow: hidden !important;
+  background-color: lightgray;
+  padding: 12px;
+  overflow: hidden !important;
+}
+
+.cardInfo {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-auto-rows: 1fr; 
+  gap: 20px;
+  padding: 20px;
+  box-sizing: border-box;
+  width: 100%;
+}

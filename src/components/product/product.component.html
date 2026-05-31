@@ -1,0 +1,22 @@
+<div class="cardInfo">
+    <div *ngIf="product">
+          <div (click)="getProduct(product.id)">
+            <mat-card class="example-card">
+              <img mat-card-image src="{{product.image}}" alt="{{product.title}}">
+              <mat-card-header>
+                <mat-card-title>{{product.title}}</mat-card-title>
+              </mat-card-header>
+              <mat-card-content>
+                <div>{{product.price}}</div>
+                <div>{{product.category}}</div>
+              </mat-card-content>
+              <mat-card-actions>
+
+              </mat-card-actions>
+            </mat-card>
+          </div>
+    </div>
+    <div *ngIf="product==null">
+        <h3>Not found info</h3>
+    </div>
+</div>

@@ -1,0 +1,21 @@
+<div>
+    <div>
+        <div>
+            <app-filter (filterProduct)="getFilterProduct($event)" />
+        </div>
+        <div>
+            <div *ngIf="productList == null || productList.length == 0">
+               <h1>Not found</h1>
+            </div>
+            <div class="grid-products">
+               <div *ngFor="let p of productList">
+                  <mat-dialog-content>
+                    <div (click)="modalOpen(p)">
+                       <app-product [product]="p"/>
+                    </div>
+                  </mat-dialog-content>
+                </div>
+            </div> 
+        </div>
+    </div>    
+</div>
